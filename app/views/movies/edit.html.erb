@@ -1,0 +1,11 @@
+<h2>Edit movie</h2>
+
+<!-- Spencer: replace form with form_for -->
+<form action="/movies/<%= @movie['imdbID'] %>" method="post" >
+  <input name="_method" type="hidden" value="patch" />
+  Title: <input name='title' type="text" value="<%= @movie['Title'] %>" /><br>
+  Year: <input name='year' type="text" value="<%= @movie['Year'] %>" /></br>
+  <input name="commit" type="submit" value="Save changes" />`
+</form>
+
+<%#= render  partial: "form_edit" %>
